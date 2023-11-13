@@ -1,28 +1,18 @@
 
+const initialState = {
+  movies: [], 
+};
 
-const initialState={
-
-    movie:[],
-
-
-}
-
-const MovieReducer=(state=initialState.movie,action)=>{
-
-    switch(action.type){
-
-     case ""
-
-
-
-
-
-
-    }
-
-
-
-}
-
+const MovieReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case "SET_MOVIES":
+      return {
+        ...state,
+        movies: action.payload || [],
+      };
+    default:
+      return state;
+  }
+};
 
 export default MovieReducer;
