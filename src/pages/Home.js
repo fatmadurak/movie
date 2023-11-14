@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchMovies } from '../Store/MoviesAction';
 
 function Home() {
-  const [searchText, setSearchText] = useState("");
+  const [searchText, setSearchText] = useState(null);
   const [year, setYear] = useState(null);
   const [type, setType] = useState(null);
   const dispatch = useDispatch();
@@ -14,20 +14,20 @@ function Home() {
   console.log(movies);
 
   const search = (searchText, selectedType, selectedYear) => {
-    selectedType && setType(selectedType);
-    selectedYear && setYear(selectedYear);
-    searchText && setSearchText(searchText);
+    setType(selectedType);
+   setYear(selectedYear);
+   setSearchText(searchText);
   };
 
   useEffect(() => {
     if (searchText || type || year) {
       dispatch(fetchMovies({ searchText, type, year }));
     }
-  }, [searchText, type, year, dispatch]);
+  }, [searchText, type, year]);
 
   return (
     <>
-      <SearchBar text={searchText} search={search} />
+      <SearchBar  search={search} />
     </>
   );
 }

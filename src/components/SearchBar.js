@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 
 function SearchBar({ search }) {
-  const [searchText, setSearchText] = useState("");
+  const [searchText, setSearchText] = useState("pokemon");
   const [selectedYear, setSelectedYear] = useState("");
   const [selectedType, setSelectedType] = useState("");
 
