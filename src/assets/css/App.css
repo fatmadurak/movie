@@ -3,6 +3,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-  background-color: #595e61;
+    justify-content: flex-start;
+    background-color: #595e61;
+    height: 100%;
+
+
 }

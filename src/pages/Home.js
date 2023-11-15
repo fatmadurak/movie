@@ -5,19 +5,29 @@ import { fetchMovies } from "../Store/MoviesAction";
 import MovieCard from "../components/MovieCard";
 import "../assets/css/Home.css"
 function Home() {
-  const [searchText, setSearchText] = useState("pokemon");
+  const [searchText, setSearchText] = useState("game");
+  const[year,setYear]=useState(null);
+  const[type,setType]=useState(null);
   const dispatch = useDispatch();
   const { movies } = useSelector((state) => state.movies);
 
-  const search = (selectedSearch) => {
+  const search = (selectedSearch,selectedYear,selectedType) => {
     setSearchText(selectedSearch);
-  };
+    setType(selectedType);
+    setYear(selectedYear);
+  }; 
 
   useEffect(() => {
-    if (searchText) {
-      dispatch(fetchMovies({ searchText }));
+    if (searchText && year && type) {
+      dispatch(fetchMovies({ searchText,year,type }));
     }
-  }, [searchText, dispatch]);
+else if(searchText){
+
+  dispatch(fetchMovies({ searchText,year,type }));
+
+}
+
+  }, [searchText, dispatch,year,type]);
 
   return (
     <>

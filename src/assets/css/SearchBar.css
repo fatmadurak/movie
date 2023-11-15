@@ -1,12 +1,11 @@
-input{
+input,select{
 
  border:none;
  padding: .5rem 1rem;
- border-radius: 2rem;
-
+ border-radius: 5px;
 }
 
-input:focus{
+input:focus,select:focus {
 
 outline: none;
 border:1px solid rgb(170, 158, 158);
@@ -16,8 +15,8 @@ border:1px solid rgb(170, 158, 158);
 
 button{
 
-padding: .5rem 1.5rem;
-border-radius: 2rem;
+padding: .5rem 1.8rem;
+border-radius: .5rem;
 outline: none;
 border: none;
 background-color:brown;
@@ -29,5 +28,35 @@ background-color:brown;
 button:hover{
 
 background-color: rgb(131, 82, 82);
+
+}
+
+
+
+
+@media only Screen and (max-width:1025px) {
+
+  input,select{
+
+width: 20%;
+
+  }
+
+
+}
+
+@media only Screen and (max-width:660px) {
+
+ 
+    input,select{
+
+        width: 70%;
+        
+          }
+
+    button{
+
+        width: 40%;
+    }
 
 }
