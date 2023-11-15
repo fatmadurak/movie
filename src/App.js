@@ -1,10 +1,12 @@
-import "./App.css";
 import routes from "./Routes";
 import { Routes,Route } from "react-router-dom";
+import "./assets/css/App.css"
 function App() {
   return (
-    <>
-      <Routes>
+    <> 
+
+    <div className="app">
+    <Routes>
       {
          routes.map((route,index)=>
 
@@ -14,6 +16,8 @@ function App() {
 
       }
       </Routes>
+    </div>
+   
     </>
   );
 }

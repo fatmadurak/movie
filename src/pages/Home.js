@@ -1,33 +1,38 @@
-// Home.js
-import React, { useState, useEffect } from 'react';
-import SearchBar from '../components/SearchBar';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchMovies } from '../Store/MoviesAction';
-
+import React, { useState, useEffect } from "react";
+import SearchBar from "../components/SearchBar";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchMovies } from "../Store/MoviesAction";
+import MovieCard from "../components/MovieCard";
+import "../assets/css/Home.css"
 function Home() {
-  const [searchText, setSearchText] = useState(null);
-  const [year, setYear] = useState(null);
-  const [type, setType] = useState(null);
+  const [searchText, setSearchText] = useState("pokemon");
   const dispatch = useDispatch();
   const { movies } = useSelector((state) => state.movies);
 
-  console.log(movies);
-
-  const search = (searchText, selectedType, selectedYear) => {
-    setType(selectedType);
-   setYear(selectedYear);
-   setSearchText(searchText);
+  const search = (selectedSearch) => {
+    setSearchText(selectedSearch);
   };
 
   useEffect(() => {
-    if (searchText || type || year) {
-      dispatch(fetchMovies({ searchText, type, year }));
+    if (searchText) {
+      dispatch(fetchMovies({ searchText }));
     }
-  }, [searchText, type, year]);
+  }, [searchText, dispatch]);
 
   return (
     <>
-      <SearchBar  search={search} />
+
+<div className="search">
+<SearchBar search={search} />
+</div>
+   
+      <div className="container">
+      
+
+        {movies.map((movie) => (
+          <MovieCard key={movie.imdbID} movie={movie} />
+        ))}
+      </div>
     </>
   );
 }

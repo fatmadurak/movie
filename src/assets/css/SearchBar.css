@@ -1,0 +1,33 @@
+input{
+
+ border:none;
+ padding: .5rem 1rem;
+ border-radius: 2rem;
+
+}
+
+input:focus{
+
+outline: none;
+border:1px solid rgb(170, 158, 158);
+
+}
+
+
+button{
+
+padding: .5rem 1.5rem;
+border-radius: 2rem;
+outline: none;
+border: none;
+background-color:brown;
+
+
+
+}
+
+button:hover{
+
+background-color: rgb(131, 82, 82);
+
+}

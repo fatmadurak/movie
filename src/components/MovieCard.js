@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
 
-function MovieCard() {
+function MovieCard({ movie }) {
+  const { Poster, Title } = movie;
+
   return (
-    <div>MovieCard</div>
-  )
+    <>
+      <img src={Poster} alt="image" />
+  
+    </>
+  );
 }
 
-export default MovieCard
+export default MovieCard;
