@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SearchBar from "../components/SearchBar";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchMovies } from "../Store/MoviesAction";
+import { fetchMovies } from "../Store/MoviesActions";
 import MovieCard from "../components/MovieCard";
 import "../assets/css/Home.css"
 import { Link } from "react-router-dom";

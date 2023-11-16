@@ -1,6 +1,7 @@
 
 const initialState = {
   movies: [], 
+  movie:{},
 };
 
 const MovieReducer = (state = initialState, action) => {
@@ -10,6 +11,11 @@ const MovieReducer = (state = initialState, action) => {
         ...state,
         movies: action.payload ,
       };
+      case "SET_MOVIE":
+        return {
+          ...state,
+          movie: action.payload ,
+        };
     default:
       return state;
   }
