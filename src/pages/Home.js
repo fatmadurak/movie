@@ -34,7 +34,7 @@ else if(searchText){
     <>
 
 <div className="wrapper">
-  <Link to="/"> <p>Movie</p></Link>
+
  
 <div className="search">
 <SearchBar search={search} />

@@ -1,0 +1,34 @@
+.CardDetail{
+
+    margin-top: 10rem;
+}
+
+.detailposter{
+
+ width: 500px;
+  
+
+}
+
+.detailWrapper{
+
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ gap: 1rem;
+
+}
+
+
+
+.detailTitle{
+
+  
+    border: 1px solid brown;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: brown;
+    padding:1rem .8rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}

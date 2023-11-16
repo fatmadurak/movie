@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import defaultImage from '../assets/images/notfound.png';
-import { fetchMovie } from '../Store/MovieAction';
-import { useDispatch, useSelector } from 'react-redux';
-
+import React, { useEffect } from "react";
+import { useParams } from "react-router-dom";
+import defaultImage from "../assets/images/notfound.png";
+import { fetchMovie } from "../Store/MovieAction";
+import { useDispatch, useSelector } from "react-redux";
+import "../assets/css/MovieDetail.css";
 function MovieDetail() {
   const { id } = useParams();
 
@@ -18,14 +18,28 @@ function MovieDetail() {
 
   return (
     <>
-      <div className='CardDetail'>
-        {movie && movie.Poster !== 'N/A' ? (
+      <div className="CardDetail">
+        {movie && movie.Poster !== "N/A" ? (
           <>
-            <img className='detailposter' src={movie.Poster} alt='image' />
-            <p className='detailTitle'>{movie.Title}</p>
+            <div className="detailWrapper">
+              <img className="detailposter" src={movie.Poster} alt="image" />
+              <div>
+                <p className="detailTitle">{movie.Title}</p>
+                <p className="detailTitle">{movie.Year}</p>
+                <p className="detailTitle">{movie.imdbID}</p>
+                <p className="detailTitle">{movie.Type}</p>
+                <p className="detailTitle">{movie.Director}</p>
+                <p className="detailTitle">{movie.Writer}</p>
+                <p className="detailTitle">{movie.Actors}</p>
+                <p className="detailTitle">{movie.Language}</p>
+              </div>
+
+           
+           
+            </div>
           </>
         ) : (
-          <img className='detailposter' src={defaultImage} alt='Not Found' />
+          <img className="detailposter" src={defaultImage} alt="Not Found" />
         )}
       </div>
     </>
