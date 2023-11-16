@@ -1,0 +1,41 @@
+.Card{
+
+    position: relative;
+}
+
+.poster{
+
+    width: 400px;
+    
+
+}
+
+.info{
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: brown;
+    width: 40%;
+    text-align: center;
+}
+
+.info p{
+
+font-size: 1.5rem;
+font-weight: bold;
+color: rgb(17, 17, 17);
+
+}
+
+.title{
+
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    background-color: brown;
+    width: 100%;
+    padding: 1rem 0 ;
+    font-size: 1.5rem;
+    font-weight: bold;
+}

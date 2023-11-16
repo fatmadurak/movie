@@ -49,6 +49,10 @@ table {
 	border-spacing: 0;
 }
 
+html{
+
+ background-color: #595e61;
+}
 
 .container
 {
@@ -58,24 +62,42 @@ table {
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     gap: 2rem;
-    margin-top: 3rem;
+    margin-top: 4rem;
+
 
 
 
 
 }
 
+.wrapper{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+      width: 66%;
+      margin-top: 3rem;
+
+}
+
+
+.wrapper a{
+
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+}
 
 .search{
 
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    margin-top: 2rem;
+ display: flex;
+ gap: 1rem;
 
 }
+
+
 
 
 

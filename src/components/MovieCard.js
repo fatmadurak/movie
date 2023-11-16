@@ -1,15 +1,19 @@
 import React from 'react';
+import "../assets/css/MovieCard.css"
 
 function MovieCard({ movie }) {
-  const { Poster, Title,Year,Type } = movie;
+  const { Poster, Title,Year,Type,imdbId } = movie;
 
   return (
     <>
-    <div>
-    <img src={Poster} alt="image" />
-    <p>type:{Type}</p>
-    <p>year:{Year}</p>
-    <p>title:{Title}</p>
+    <div className='Card'>
+    <img className='poster' src={Poster} alt="image" />
+    <div className='info'>
+    <p>Tür:{Type}</p>
+    <p>Yıl:{Year}</p>
+    </div>
+  
+    <p className='title'>{Title}</p>
     </div>
      
   

@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchMovies } from "../Store/MoviesAction";
 import MovieCard from "../components/MovieCard";
 import "../assets/css/Home.css"
+import { Link } from "react-router-dom";
 function Home() {
   const [searchText, setSearchText] = useState("game");
   const[year,setYear]=useState(null);
@@ -32,8 +33,12 @@ else if(searchText){
   return (
     <>
 
+<div className="wrapper">
+  <Link to="/"> <p>Movie</p></Link>
+ 
 <div className="search">
 <SearchBar search={search} />
+</div>
 </div>
    
       <div className="container">
@@ -43,6 +48,7 @@ else if(searchText){
           <MovieCard key={movie.imdbID} movie={movie} />
         ))}
       </div>
+
     </>
   );
 }
