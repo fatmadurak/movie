@@ -4,8 +4,8 @@
 }
 
 .detailposter{
-
- width: 500px;
+display: block;
+ width: 400px;
   
 
 }
@@ -32,3 +32,45 @@
     border-radius: 1rem;
     margin-bottom: 1rem;
 }
+
+
+
+
+@media only Screen and (max-width:1210px) {
+
+ .detailWrapper{
+
+  flex-direction: column;
+ margin-top: 1rem;
+ }
+
+
+}
+
+
+
+@media only Screen and (max-width:550px) {
+
+
+    .detailTitle{
+
+     margin: 1rem 10%;
+    
+    }
+    
+   
+   
+   }
+
+   @media only Screen and (max-width:480px) {
+
+
+    .detailTitle{
+
+     margin: 1rem 20%;
+    
+    }
+    
+   
+   
+   }

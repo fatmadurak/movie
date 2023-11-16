@@ -66,12 +66,26 @@ table {
  .app .linkmovie{
 
     
-   position: fixed;
+   position: absolute;
    left: 17%;
-   top:4%;
+   top:30px;
    margin-top: 1rem;
     text-decoration: none;
     font-size: 3rem;
     font-weight: bold;
     color: #000;
 }
+
+
+
+@media only Screen and (max-width:1012px) {
+
+    .app .linkmovie{
+
+    top:0;
+      
+     }
+   
+   
+   }
+   
